@@ -8,7 +8,7 @@ const BoardViewer = ({ size, username, port } : BoardProps) => {
     const [game, setGame] = useState(new Chess());
     const [moves, setMoves] = useState([[]])
 
-    const pgnEndRef = useRef(null)
+    const pgnEndRef = useRef<null | HTMLDivElement>(null)
 
     async function getMoves() {
         try {
